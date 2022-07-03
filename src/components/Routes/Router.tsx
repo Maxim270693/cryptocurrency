@@ -1,15 +1,15 @@
 import React from 'react';
-import {Route, Routes} from "react-router-dom";
 import App from "../../App";
+import {Route, Routes} from "react-router-dom";
+import Briefcase from "../Briefcase/Briefcase";
 
-const Routes = () => {
+const Router = () => {
     return (
-        <div>
-            <Routes>
-                <Route path='/' element={<App/>}/>
-            </Routes>
-        </div>
+        <Routes>
+            <Route path='/' element={<App/>}/>
+            <Route path='/briefcase' element={<Briefcase/>}/>
+        </Routes>
     );
 };
 
-export default Routes;
+export default Router;
