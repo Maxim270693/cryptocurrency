@@ -3,8 +3,8 @@ import {getCryptocurrency, setError} from "../../actions/actionCreators";
 import {cryptocurrencyAPI} from "../../dal/API";
 
 export const getCryptocurrencyTC = () => (dispatch: Dispatch) => {
-    dispatch(setError(true))
     try {
+        dispatch(setError(true))
         cryptocurrencyAPI.getCryptocurrency()
             .then((res) => {
                 dispatch(getCryptocurrency(res.data.data))
@@ -12,6 +12,6 @@ export const getCryptocurrencyTC = () => (dispatch: Dispatch) => {
     } catch (error) {
         console.log('e', error)
     } finally {
-        setError(false)
+        dispatch(setError(false))
     }
 };

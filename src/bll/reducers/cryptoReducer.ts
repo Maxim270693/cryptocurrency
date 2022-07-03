@@ -9,13 +9,13 @@ export const initialState = {
 
 export const cryptoReducer = (state: InitialStateType = initialState, action: ActionsType): InitialStateType => {
     switch (action.type) {
-        case SET_ERROR:
-            return {...state, isLoading: action.payload}
         case GET_CRYPTOCURRENCY:
             return {
                 ...state,
                 cryptocurrency: action.payload
             }
+        case SET_ERROR:
+            return {...state, ...action.payload}
         default:
             return state
     }

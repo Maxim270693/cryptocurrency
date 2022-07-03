@@ -1,0 +1,23 @@
+.wrapper {
+  border: 1px solid #000;
+  padding: 12px;
+  width: 100%;
+
+  .title {
+    cursor: pointer;
+  }
+
+  .price {
+    padding-left: 25px;
+  }
+
+  .description {
+    cursor: pointer;
+    color: cadetblue;
+    padding-left: 25px;
+
+    &:hover {
+      color: brown;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
-import App from "../../App";
 import {Route, Routes} from "react-router-dom";
 import Briefcase from "../Briefcase/Briefcase";
+import App from "../App/App";
 
 const Router = () => {
     return (
